@@ -8,5 +8,6 @@ yum install httpd -y
 echo "<html><body><h1>Welcome to CloudXskills ! </h1></body></html>" > /var/www/html/index.html
 
 # Start Apache
+sudo su
 systemctl enable httpd
 systemctl start httpd
