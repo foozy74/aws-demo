@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Install Apache web server
+apt-get update
+apt-get install apache2 -y
+
+# Configure Apache to serve our HTML file
+echo "<html><body><h1>Welcome to CloudXskills ! </h1></body></html>" > /var/www/html/index.html
+
+# Start Apache
+systemctl start apache2
