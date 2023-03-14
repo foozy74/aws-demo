@@ -5,7 +5,7 @@ yum update -y
 yum install httpd -y
 
 # Configure Apache to serve our HTML file
-echo "<html><body><h1>Hello World!</h1></body></html>" > /var/www/html/index.html
+echo "<html><body><h1>Welcome to CloudXskills ! </h1></body></html>" > /var/www/html/index.html
 
 # Start Apache
 systemctl enable httpd
