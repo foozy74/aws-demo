@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# Install Apache web server
-yum update -y
-yum install httpd -y
+sudo yum update -y
+sudo yum install httpd -y
 
-# Configure Apache to serve our HTML file
-echo "<html><body><h1>Welcome to CloudXskills ! </h1></body></html>" > /var/www/html/index.html
+sudo service httpd start
+sudo chkconfig httpd on
 
-# Start Apache
-sudo su
-systemctl enable httpd
-systemctl start httpd
+echo "<html><head><title>FX Skills Website</title></head><body><h1>Hello from FutureXskills EC2 instance </h1></body></html>" | sudo tee /var/www/html/index.html
+- 
