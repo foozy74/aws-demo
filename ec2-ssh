@@ -1,0 +1,1 @@
+ssh -i fx-key.pem ec2-user@3.87.79.187
