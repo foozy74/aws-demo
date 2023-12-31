@@ -1,0 +1,8 @@
+aws kinesis create-stream --stream-name FutureXstream
+aws kinesis describe-stream-summary --stream-name FutureXstream
+aws kinesis list-streams
+aws kinesis put-record --stream-name FutureXstream --partition-key 123 --data testdata
+aws kinesis get-shard-iterator --shard-id shardId-000000000000 --shard-iterator-type TRIM_HORIZON --stream-name FutureXstream
+aws kinesis get-records --shard-iterator AAAAAAAAAAGh9VaBb0QtBTiVBEXJ1yFro4CnBQGhYOjIhNtoJ2EvVvfuDlX+Tda+wu/uX6TGl1ZYh0j8I15ZJ9nFxicZUIAZP+/3aHlbdA1OISjd0ANuPryM4ts99p6JcU26DR4WPj5McH/HvH0BSpvDiRNpiQ46IKqZVS83hDzIZojvX60MnvCPlmZ4rqE4Z+pX/VuUn0PU8t2hhvWA86JSLLoj7fXCHZU8CH8N7ni1Nsi9dbU+/w==
+aws kinesis delete-stream --stream-name FutureXstream
+aws kinesis describe-stream-summary --stream-name FutureXstream
