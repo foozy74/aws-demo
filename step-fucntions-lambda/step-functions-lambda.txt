@@ -1,3 +1,5 @@
+#addFunction
+
 import json
 
 def lambda_handler(event, context):
@@ -8,4 +10,32 @@ def lambda_handler(event, context):
     return {
         'result': result
     }
+
+#multiplyFunction
+
+import json
+
+def lambda_handler(event, context):
+    prev_result = event['result']
+    operand3 = 2
+    result = prev_result * operand3
+    print(f"multiplyFunction Result: {result}")
+    return {
+        'result': result
+    }
+	
+#subtractFunction
+
+import json
+
+def lambda_handler(event, context):
+    prev_result = event['result']
+    operand4 = 5
+    final_result = prev_result - operand4
+    print(f"subtractFunction Final Result: {final_result}")
+    return {
+        'finalResult': final_result
+    }
+
+
 
