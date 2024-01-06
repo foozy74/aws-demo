@@ -1,0 +1,11 @@
+import json
+
+def lambda_handler(event, context):
+    operand1 = 5
+    operand2 = 10
+    result = operand1 + operand2
+    print(f"addFunction Result: {result}")
+    return {
+        'result': result
+    }
+
