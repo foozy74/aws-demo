@@ -1,0 +1,32 @@
+#futurex-invoke-glue-etl function
+
+import boto3
+
+def lambda_handler(event, context):
+    # Replace these values with your own
+    region = 'us-east-1'
+    glue_job_name = 'futurex-etl'
+
+    # Create a Glue client
+    glue_client = boto3.client('glue', region_name=region)
+
+    try:
+        # Trigger the Glue job
+        response = glue_client.start_job_run(JobName=glue_job_name)
+
+        # Print the response or log it for monitoring
+        print(f"Glue job run started successfully: {response['JobRunId']}")
+
+        return {
+            'statusCode': 200,
+            'body': f"Glue job run started successfully: {response['JobRunId']}"
+        }
+    except Exception as e:
+        print(f"Error triggering Glue job: {str(e)}")
+        return {
+            'statusCode': 500,
+            'body': f"Error triggering Glue job: {str(e)}"
+        }
+
+
+
